@@ -1,0 +1,39 @@
+let pallot = [];
+
+class Pallo {
+    constructor() {
+        this.x = Math.random() * canvas.width;
+        this.y = 0;
+        this.speed = 2;
+        this.radius = 15;
+        this.color = Math.random() < 0.5 ? 'red' : 'green';
+    }
+    
+    update() {
+        this.y += this.speed;
+    }
+    
+    draw() {
+        ctx.fillStyle = this.color;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+        ctx.fill();
+    }
+}
+
+function createBall() {
+    pallot.push(new Pallo());
+}
+
+function updateBalls() {
+    for (let i = pallot.length - 1; i >= 0; i--) {
+        pallot[i].update();
+        pallot[i].draw();
+        
+        if (pallot[i].y > canvas.height) {
+            pallot.splice(i, 1);
+        }
+    }
+}
+
+setInterval(createBall, 1000);
