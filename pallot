@@ -21,11 +21,11 @@ class Pallo {
     }
 }
 
-function createBall() {
+function luoPallo() {
     pallot.push(new Pallo());
 }
 
-function updateBalls() {
+function paivitaPallot() {
     for (let i = pallot.length - 1; i >= 0; i--) {
         pallot[i].update();
         pallot[i].draw();
@@ -36,4 +36,4 @@ function updateBalls() {
     }
 }
 
-setInterval(createBall, 1000);
+setInterval(luoPallo, 1000);
