@@ -36,4 +36,4 @@ function paivitaPallot() {
     }
 }
 
-setInterval(luoPallo, 1000);
+setInterval(luoPallo, 800); // Uusi pallo joka 0.8 sekuntia
