@@ -6,7 +6,7 @@ class Pallo {
         this.y = 0;
         this.speed = 2;
         this.radius = 15;
-        this.color = Math.random() < 0.5 ? 'red' : 'green';
+        this.color = Math.random() < 0.7 ? 'green' : 'red';
     }
     
     update() {
