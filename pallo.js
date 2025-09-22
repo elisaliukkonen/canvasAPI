@@ -92,7 +92,7 @@ function updateGameArea() {
     }
 
     for (let i = Pallot.length - 1; i >= 0; i--) {
-        Pallot[i].y += 1;
+        Pallot[i].y += 2;
         Pallot[i].update();
 
         if (Pallot[i].y > myGameArea.canvas.height - Pallot[i].width / 2) {
