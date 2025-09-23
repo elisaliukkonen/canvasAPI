@@ -111,7 +111,7 @@ function updateGameArea() {
                 let x = Math.random() * (800 - 2 * radius) + radius;
                 let y = radius;
                 if (!isOverlapping(x, y, Pallot, radius)) {
-                    let väri = Math.random() < 0.7 ? "green" : "red";
+                    let väri = Math.random() < 0.5 ? "green" : "red";
                     Pallot.push(new component(20, 20, väri, x, y, true));
                     break;
                 }
